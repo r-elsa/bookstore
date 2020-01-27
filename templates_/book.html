@@ -1,0 +1,31 @@
+{% extends "index.html" %}
+{% block content %}
+
+<h1>{{book.title}}</h1>
+
+<img src="{{book.imgurl}}" alt="">
+
+
+<form action='' method="put"> 
+
+    <div class="form-group row">
+      <label for="name" class="col-sm-2 col-form-label">Author</label>
+      <div class="col-sm-10">
+        <input class="form-control" id="name" type="text" value= {{book.author}}>
+      </div>
+    </div>
+
+    
+    <div class="form-group row">
+      <label for="name" class="col-sm-2 col-form-label">Year of publication</label>
+      <div class="col-sm-10">
+        <input class="form-control" id="name" type="text" value= {{book.publication}}>
+      </div>
+    </div>
+
+    <button type="submit" value="submit" class="btn btn-primary">Edit</button>
+  </form>
+
+  <a href="http://127.0.0.1:8080/books" class="btn btn-primary">Back</a>
+
+  {% endblock %}

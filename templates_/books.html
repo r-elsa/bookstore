@@ -1,0 +1,23 @@
+{% extends "index.html" %}
+{% block content %}
+
+    <h1>Books</h1>
+    <a href="http://127.0.0.1:8080/addbook" class="btn btn-primary">Add book</a>
+
+    {% for book in books %}
+
+   
+    <div class="card" style="width: 18rem;">
+      <div class="card-body">
+        <h5 class="card-title">{{book.title}}</h5>
+        <p class="card-text">Author: {{book.author}}</p>
+        <a href="http://127.0.0.1:8080/books/{{book.title}}" class="btn btn-primary">Read more</a>
+      </div>
+    </div>
+
+      {%endfor%}
+
+
+
+    {% endblock %}
+      
